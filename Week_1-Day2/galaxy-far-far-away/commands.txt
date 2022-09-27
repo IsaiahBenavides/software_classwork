@@ -1,0 +1,64 @@
+Terminal Lab
+
+1.  mkdir death_star
+    cd death_star 
+    touch darth_vader.txt
+    touch princess_leia.txt
+    touch storm_trooper.txt
+    cd ..
+    mkdir tatooine
+    cd tatooine
+    touch luke.txt
+    touch ben_kenobi.txt
+    mkdir millenium_falcon
+    cd millenium_falcon
+    touch han_solo.txt
+    touch chewbaca.txt
+
+2.  cd ..
+    mv ben_kenobi.txt obi_wan.txt
+
+3.
+    cd ../death_star
+    cp storm_trooper.txt ../tatooine
+
+4.  cd ../tatooine
+    mv luke.txt millenium_falcon && mv obi_wan.txt millenium_falcon
+    mv millenium_falcon ..
+    cd ..
+    mv millenium_falcon death_star
+    cd death_star
+    mv princess_leia.txt millenium_falcon
+
+
+5.
+    cd millenium_falcon
+    rm obi_wan.txt
+
+6.  cd ../..
+    mkdir yavin_4
+    cd death_star
+    mv millenium_falcon ../yavin_4
+    mkdir x-wing
+    cd millenium_falcon
+    mv princess_leia.txt ..
+    mv luke.txt ../x-wing
+    cd ..
+    mv millenium_falcon .. && mv x-wing ..
+    cd ../death_star
+    mkdir tie_fighter_1 && mkdir tie_fighter_2 && mkdir tie_fighter_3
+    mv darth_vader.txt tie_fighter_1
+    cp storm_trooper.txt tie_fighter_2 && cp storm_trooper.txt tie_fighter_3
+    mv tie_fighter_1 .. && mv tie_fighter_2 .. && mv tie_fighter_3 ..
+
+7.  cd ..
+    rm -r tie_fighter_2 && rm -r tie_fighter_3
+
+8.  cd x-wing
+    touch the_force.txt
+    cd ..
+    rm -r death_star
+    mv x-wing yavin_4 && mv millenium_falcon yavin_4
+    
+extra.
+    
