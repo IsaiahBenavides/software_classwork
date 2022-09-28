@@ -60,5 +60,3 @@ Terminal Lab
     rm -r death_star
     mv x-wing yavin_4 && mv millenium_falcon yavin_4
     
-extra.
-    
