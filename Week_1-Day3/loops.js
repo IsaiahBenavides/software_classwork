@@ -66,16 +66,16 @@ let firstMovie = movies[0] // will give "Pulp Fiction"
 console.log(firstMovie)
 
 movies.push("Last Samurai", "The Good, The Bad, and The Ugly")
-//push adds to the end of the array
+//push property adds to the end of the array
 
 movies.unshift("Nightcrawler")
-//unshift adds to the start of the array. Now firstMovie would give Nightcrawler
+//unshift property adds to the start of the array. Now firstMovie would give Nightcrawler
 
 movies.pop()
-//removes the last entry in the array. this would remove The Good, The Bad, and The Ugly
+//pop property removes the last entry in the array. this would remove The Good, The Bad, and The Ugly
 
 movies.shift()
-//removes the first entry in the array "0". This would remove Nightcrawler
+//shift property removes the first entry in the array "0". This would remove Nightcrawler
 
 /*
 unshift -> [...] <- push
@@ -93,6 +93,47 @@ let removedMovies = movies.splice(0, 3)
 console.log(movies)
 
 console.log(removedMovies)
+
+// Iterate Over an Array w/ a For loop
+// for loop
+/* for(let i =0; i < movies.length; i++) {
+    console.log(movies[i])
+}
+*/
+
+//This is an arrow function! movie is our itterator, it equals the entry of 
+// its rotation (1st go around it is Baby Driver 2nd it is Last Samurai and so on) 
+// forEach Method
+movies.forEach((movie, idx) => {
+    console.log(movie + " is a great movie" + " and is at index " + idx)
+})
+
+// String concatination
+// console.log("The movie " + movies[0] + " is awesome!")
+
+// for of loop
+for (let movie  of movies) {
+    console.log(movie)
+}
+
+//spread operator will take the elements of the given array and spread them out.
+//these methods make a copy of the original array
+// spread operator examples
+const movieCopy = [...movies]
+console.log(movieCopy)
+
+let moreMovies = ["Space Balls", "Alien", ...movies, "Armagedon"]
+console.log(moreMovies)
+
+//join operator
+
+const movieStr = moreMovies.join()
+console.log(movieStr)
+
+// split operator is a string method, can only be used with strings!
+
+const anothaArray = movieStr.split(",")
+console.log(anothaArray)
 
 
 
