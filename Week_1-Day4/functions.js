@@ -99,6 +99,20 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 
+// let stinko = []
+// for (let i = 1; i < 17; i++) {
+//     if (i % 5 === 0 && i % 3 === 0) {
+//         stinko.push("fizzbuzz")
+//     } else if (i % 3 === 0) {
+//         stinko.push("fizz")
+//     } else if (i % 5 === 0) {
+//         stinko.push("buzz")
+//     } else {
+//         stinko.push(i)
+//     }console.log(stinko)
+// }
+
+
 
 // for (let i = 10; i <= 100; i++) {
 //     if (i % 10 === 0 && i % 20 != 0) {
