@@ -51,14 +51,14 @@
 
 // console.log(addDivide(10, 20, 600))
 
-// const findAverage = (...args) => {
-//     let base = 0
-//     console.log(args)
-//     args.forEach((num) => {
-//         base += num
-//     })
-//     return base / args.length
-// }
+const findAverage = (...args) => {
+    let base = 0
+    console.log(args)
+    args.forEach((num) => {
+        base += num
+    })
+    return base / args.length
+}
 
 // console.log(findAverage(2,58,89,10,53))
 
@@ -89,28 +89,28 @@
 // increment()
 // increment()
 
-for (let i = 1; i <= 100; i++) {
-    if (i % 5 === 0 && i % 3 != 0) {
-        console.log("Buzz")
-    } else if (i % 3 === 0) {
-        console.log("Fizz")
-    } else {
-        console.log(i)
-    }
-}
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 5 === 0 && i % 3 != 0) {
+//         console.log("Buzz")
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz")
+//     } else {
+//         console.log(i)
+//     }
+// }
 
-let stinko = []
-for (let i = 1; i < 17; i++) {
-    if (i % 5 === 0 && i % 3 === 0) {
-        stinko.push("fizzbuzz")
-    } else if (i % 3 === 0) {
-        stinko.push("fizz")
-    } else if (i % 5 === 0) {
-        stinko.push("buzz")
-    } else {
-        stinko.push(i)
-    }console.log(stinko)
-}
+// let stinko = []
+// for (let i = 1; i < 17; i++) {
+//     if (i % 5 === 0 && i % 3 === 0) {
+//         stinko.push("fizzbuzz")
+//     } else if (i % 3 === 0) {
+//         stinko.push("fizz")
+//     } else if (i % 5 === 0) {
+//         stinko.push("buzz")
+//     } else {
+//         stinko.push(i)
+//     }console.log(stinko)
+// }
 
 
 
