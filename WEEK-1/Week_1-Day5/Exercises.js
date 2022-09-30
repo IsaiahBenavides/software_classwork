@@ -60,7 +60,7 @@ const sumArr = [];
 
 for (let i = 0; i < arr_3.length; i++) {
     const sum1 = arr_3[i] + arr_4[i]
-    sumArr.push (sum1)
+    sumArr.push(sum1)
 }
 console.log(sumArr)
 
@@ -86,14 +86,52 @@ console.log(sumArr)
 
 //Class Solution
 const addList = (...args) => {
-    if (!args.length) {
-        return "No Argument"
+    if (!args.length) {     //this is looking to see if args.length is truthy or falsey
+        return "No Argument" // ! - the bang operator looks for falsey statements
     }
     let sum = 0
     for (let i = 0; i < args.length; i++) {
-        sum += args[i] 
+        sum += args[i]
     }
     return sum
 }
 
-console.log(addList(12,2,51,86,231,185,2,35,45,1))
+console.log(addList(12, 2, 51, 86, 231, 185, 2, 35, 45, 1))
+
+
+
+//Bonus Question if you have finished the exercises:
+// Write a JavaScript function that checks whether a passed string is palindrome or not?
+// A palindrome is word, phrase, or sequence that reads 
+// the same backward as forward, e.g., "madam" or "nurses run".
+
+//.replace(/\s/g, '') is an example of regex, it has its own syntax and is like another language!
+//this example is searching through the string and removing anything 
+//that it finds which is specified
+
+function checkPalindrome(str) {
+    const trimmed = str.trim().replace(/\s/g, '')
+    const flippedStr = trimmed
+        .split("")
+        .reverse()
+        .join("")
+    console.log(flippedStr)
+    return flippedStr.toLowerCase() === trimmed.toLowerCase()
+}
+
+console.log(checkPalindrome("     madam    "))
+console.log(checkPalindrome("   AB BA AB   "))
+console.log(checkPalindrome("Mad     am"))
+
+//Flip string with a for loop!
+
+let str = "hello world"
+let flippedStr = ""
+
+for (let i = str.length - 1; i >= 0; i--) {
+    flippedStr += str[i]
+}
+console.log(flippedStr)
+
+
+
