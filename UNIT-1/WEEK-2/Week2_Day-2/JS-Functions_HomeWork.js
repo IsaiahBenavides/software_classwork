@@ -48,6 +48,15 @@ console.log(isCharAVowel("b"))
 // 4.
 // Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
 
+
+const sumArray = function(...nums){
+    for (let x = 0; x <= sumArray.length; x++) {
+        return sumArray.length[x] += sumArray.length[x]
+    }
+}
+
+console.log(sumArray([1,2,3]))
+
 // 5.
 // Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
 
