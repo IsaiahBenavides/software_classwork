@@ -41,7 +41,7 @@ console.log(planetHasWater("Mars"))
 
 // FUNCTION REVIEW QUESTIONS
 // ❓ How many different ways are there to define a function?
-// 2, 3 if you count Arrow as a seperate definition
+// 2, Function declaration & Function Expression. 3 if you count Arrow as a seperate definition
 // ❓ What's the only practical difference between a function definition and a function expression?
-// Expression will not hoist the function to the top and act it out 
-// globaly while declaration will.
+// Expression will not hoist the function to the top and act it out globaly while declaration will.
+
