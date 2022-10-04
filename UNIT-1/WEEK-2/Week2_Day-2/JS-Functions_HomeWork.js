@@ -49,10 +49,14 @@ console.log(isCharAVowel("b"))
 // Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
 
 
-const sumArray = function(...nums){
-    for (let x = 0; x <= sumArray.length; x++) {
-        return sumArray.length[x] += sumArray.length[x]
-    }
+
+const sumArray = function(nums){
+    let base = 0
+    console.log(nums)
+    nums.forEach((x) => {
+        base += x
+    })
+    return base
 }
 
 console.log(sumArray([1,2,3]))
