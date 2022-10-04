@@ -76,8 +76,30 @@ console.log(multiplyArray([4,5,6]))
 // 6.
 // Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called.
 
+const numArgs = function(args){
+    let base = 0
+    console.log(args)
+    args.forEach(() => {
+        base++ 
+    })
+    return base
+}
+
+console.log(numArgs([1,2,3,4,5,6,7,8,9,0]))
+
 // 7.
 // Define a function, as a function declaration, reverseString that takes a string, reverses the characters, and returns it. For example, reverseString('rockstar');would return the string "ratskcor".
+
+function reverseString(str){
+    let flippedStr = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        flippedStr += str[i]
+    }
+    return flippedStr
+}
+
+console.log(reverseString('Yes'))
+console.log(reverseString('This is in reverse'))
 
 // 8.
 // Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument and returns the length of the longest string.
