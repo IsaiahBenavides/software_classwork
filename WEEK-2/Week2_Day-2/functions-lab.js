@@ -12,8 +12,7 @@
 
 function computeArea (width, height) {
     let area = width * height
-    console.log ("The area of a rectangle with a width of " + width + 
-    " and a height of " + height + " is " + area + " square units.")
+    console.log ("The area of a rectangle with a width of " + width + " and a height of " + height + " is " + area + " square units.")
 }
 computeArea(20,15)
 
@@ -24,8 +23,7 @@ computeArea(20,15)
 
 // Return trueif the planetargument is either "Earth" or "Mars", otherwise return false.
 
-// Bonus points if you ensure the function will work regardless of the 
-//casing of the planetbeing passed in ('earth', 'MARS', etc.).
+// Bonus points if you ensure the function will work regardless of the casing of the planetbeing passed in ('earth', 'MARS', etc.).
 
 // Invoke the function a couple of times to test it!
 
@@ -44,7 +42,6 @@ console.log(planetHasWater("Mars"))
 // FUNCTION REVIEW QUESTIONS
 // ❓ How many different ways are there to define a function?
 // 2, 3 if you count Arrow as a seperate definition
-// ❓ What's the only practical difference between a function definition 
-// and a function expression?
+// ❓ What's the only practical difference between a function definition and a function expression?
 // Expression will not hoist the function to the top and act it out 
 // globaly while declaration will.
