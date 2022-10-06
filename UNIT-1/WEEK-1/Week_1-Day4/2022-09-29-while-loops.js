@@ -105,8 +105,8 @@ for (let i = 10; i <= 100; i++) {
         console.log(i)
     }
 }
-for (let i = 10; i <=100; i++) {
-    if(i % 20 === 0){
+for (let i = 10; i <= 100; i++) {
+    if (i % 20 === 0) {
         console.log(i)
     }
 }
@@ -114,14 +114,14 @@ for (let i = 10; i <=100; i++) {
 //3
 
 let i = 10
-while (i <= 100 ) {
+while (i <= 100) {
     if (i % 10 === 0 && i % 20 != 0) {
         console.log(i)
     }
     i++
 }
 i = 10
-while (i <= 100 ) {
+while (i <= 100) {
     if (i % 20 === 0) {
         console.log(i)
     }
@@ -136,7 +136,7 @@ while (g < arrX.length) {
         console.log(arrX[g])
     } else {
         console.log(arrX[g])
-    }  
+    }
     g++
 }
 
@@ -147,7 +147,7 @@ let k = 500
 while (k <= 800 && k >= 500) {
     if (k % 4 === 0) {
         console.log(k)
-    }k++
+    } k++
 }
 
 

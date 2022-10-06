@@ -10,11 +10,11 @@
 
 // Invoke the function to test it.
 
-function computeArea (width, height) {
+function computeArea(width, height) {
     let area = width * height
-    console.log ("The area of a rectangle with a width of " + width + " and a height of " + height + " is " + area + " square units.")
+    console.log("The area of a rectangle with a width of " + width + " and a height of " + height + " is " + area + " square units.")
 }
-computeArea(20,15)
+computeArea(20, 15)
 
 // EXERCISE 2: Write a Function Expression
 // Write a function named planetHasWaterusing the function expression syntax.
@@ -29,10 +29,10 @@ computeArea(20,15)
 
 let planetHasWater = (planet) => {
     planet = planet.toLowerCase();
-    if(planet === "earth" || planet === "mars"){
+    if (planet === "earth" || planet === "mars") {
         console.log(planet);
         return true;
-    }else{
+    } else {
         return false;
     }
 }

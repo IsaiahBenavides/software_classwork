@@ -78,15 +78,15 @@ if (true) {
 const integer2 = 21
 
 if (integer2 > 0) {
-  if (integer2 > 100) {
-    console.log("integer is greater than 100")
-  } else if (integer2 === 100){
-    console.log("its's 100")
-  } else {
-    console.log("integer is less than 100")
-  }
+    if (integer2 > 100) {
+        console.log("integer is greater than 100")
+    } else if (integer2 === 100) {
+        console.log("its's 100")
+    } else {
+        console.log("integer is less than 100")
+    }
 } else {
-  console.log("integer is negative")
+    console.log("integer is negative")
 }
 
 //Chained else/if

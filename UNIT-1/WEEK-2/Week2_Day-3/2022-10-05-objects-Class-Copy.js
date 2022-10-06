@@ -13,7 +13,7 @@
 
 // unless you have a good reason to, it's best to assign the values to the keys 
 const car = {
-    make: "BMW", 
+    make: "BMW",
     model: "M3",
     color: "Black",
     year: "2026"

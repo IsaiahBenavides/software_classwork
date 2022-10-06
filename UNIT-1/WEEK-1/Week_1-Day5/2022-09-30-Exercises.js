@@ -18,22 +18,22 @@ for (let i = 0; i < arr_1.length; i++) {
 
 // console.log(sumA, sumB, sumA + sumB)
 
- const sum = (...x) => {
-     let base = 0
-     console.log(x)
-     arr_2.forEach((v) => {
-         base += v
-     })
-     let base2 = 0
-     console.log(x)
-     arr_1.forEach((v) => {
+const sum = (...x) => {
+    let base = 0
+    console.log(x)
+    arr_2.forEach((v) => {
+        base += v
+    })
+    let base2 = 0
+    console.log(x)
+    arr_1.forEach((v) => {
         base2 += v
     })
     let end = base + base2
-     return end
- }
+    return end
+}
 
- console.log(sum())
+console.log(sum())
 
 // let emptyArray = []
 // let resultArray = []

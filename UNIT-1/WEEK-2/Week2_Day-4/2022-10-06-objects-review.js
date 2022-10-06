@@ -8,9 +8,9 @@
 
 
 const adventurer = {
-	name: "Timothy",
-	hitpoints: 10,
-	belongings: ["Sword", "Potion", "Tums"]
+    name: "Timothy",
+    hitpoints: 10,
+    belongings: ["Sword", "Potion", "Tums"]
 };
 
 // Access Timothy
@@ -23,20 +23,20 @@ console.log(adventurer.hitpoints);
 console.log("My name is " + adventurer.name + ". I have 99 " + adventurer.belongings[2] + " in my adventurer's bad.");
 
 // Iterate over an array
-for (let i=0; i < adventurer.belongings.length; i++) {
-	console.log(adventurer.belongings[i]);
+for (let i = 0; i < adventurer.belongings.length; i++) {
+    console.log(adventurer.belongings[i]);
 };
 
 // ==== US AN OBJECT WITHIN ANOTHER OBJECT ====
 
 const newAdventurer = {
-	name: "Timothy",
-	hitpoints: 10,
-	belongings: ["sword", "potion", "Tums"],
-	companion: {
-		name: "Velma",
-		type: "Bat"
-	}
+    name: "Timothy",
+    hitpoints: 10,
+    belongings: ["sword", "potion", "Tums"],
+    companion: {
+        name: "Velma",
+        type: "Bat"
+    }
 };
 
 // Access companion obj

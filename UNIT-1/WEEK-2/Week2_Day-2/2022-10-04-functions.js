@@ -99,11 +99,11 @@ console.log(bottleCapper("green bottle (argument)", "white cap (argument)"));
 
 function getDevObject(name, age, ...skills) {
     return {
-      devName: name,
-      age: age,
-      jobSkills: skills
+        devName: name,
+        age: age,
+        jobSkills: skills
     };
-  }
+}
 
 console.log(getDevObject("josh", 28, "code", "something else"));
 
@@ -122,7 +122,7 @@ console.log(getDevObject("josh", 28, "code", "something else"));
 const bicycle = {
     brand: "mongoose",
     color: "red"
-} 
+}
 
 function setColor(bicycle, color /*= "purple") is the same thing as line 124*/) {
     bicycle.color = color || "purple"
@@ -135,7 +135,7 @@ console.log(bicycle);
 
 // Objects
 // Key / value pairs
-const arrXY = [1,2,3,4]
+const arrXY = [1, 2, 3, 4]
 const person = {
     name: "Mina",
     job: "Dev",
@@ -176,26 +176,26 @@ console.log(arrOfObj[3]);
 const z = ["red", "green", "blue"]
 
 // Anonymous Function is not named and is only used locally 
-z.forEach(function(color) {
+z.forEach(function (color) {
     console.log(color);
 });
 
 // Scope
 // There's a concept in programming known as The Principle of Least Access.
 // The principle is based on the idea that limiting the accessibility of variables (and functions) helps reduce bugs in the code - think of it as a form of "code security".[]
-    // a is a global variable
+// a is a global variable
 let a = 4;  // Global: a, foo
 
 function foo(x) {   // x is a local variable
     let b = a * 4;  // foo: x, b, bar
     function bar(y) {   //y is also a local variable but it cannot be used outside of the bar function, it is nested inside the bar function which itself is inside the foo function.
-        let c = y *b;   // bar: y, c
+        let c = y * b;   // bar: y, c
         return c;
     }
     return bar(b);
 }
 console.log(foo(a));
-    // This will give a reference error. Although they share the same scope with foo above they cannot share local variables. (think independent buildings)
+// This will give a reference error. Although they share the same scope with foo above they cannot share local variables. (think independent buildings)
 // function foo1() {
 //     console.log(c)
 // }
@@ -211,21 +211,21 @@ console.log(foo(a));
 function varTest() {
     var x = 1;
     if (true) {
-      var x = 2;  // same variable!
-      console.log(x);  // 2
+        var x = 2;  // same variable!
+        console.log(x);  // 2
     }
     console.log(x);  // 2
-  }
-  
-  // Follows the rules of the principle of least access
-  function letTest() {
+}
+
+// Follows the rules of the principle of least access
+function letTest() {
     let x = 1;
     if (true) {
-      let x = 2;  // different variable
-      console.log(x);  // 2
+        let x = 2;  // different variable
+        console.log(x);  // 2
     }
     console.log(x);  // 1
-  }
+}
 
 varTest()
 letTest()

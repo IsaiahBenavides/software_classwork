@@ -46,21 +46,21 @@ console.log(elephant)
 
 class Car {
     constructor(
-        makeParam, 
-        modelParam, 
-        yearParam, 
-        colorParam, 
-        doorsParam, 
-        locationParam, 
+        makeParam,
+        modelParam,
+        yearParam,
+        colorParam,
+        doorsParam,
+        locationParam,
         priceParam
-        ) {
-        this.make       = makeParam
-        this.model      = modelParam
-        this.year       = yearParam
-        this.color      = colorParam
-        this.doors      = doorsParam
-        this.location   = locationParam
-        this.price      = priceParam
+    ) {
+        this.make = makeParam
+        this.model = modelParam
+        this.year = yearParam
+        this.color = colorParam
+        this.doors = doorsParam
+        this.location = locationParam
+        this.price = priceParam
     }
     driving() {
         this.isDriving = true

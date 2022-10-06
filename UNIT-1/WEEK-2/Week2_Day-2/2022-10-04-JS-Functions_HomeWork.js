@@ -137,7 +137,7 @@ function stringsLongerThan(strArray, num) {
             let removedStr = strArray.splice(i)
             strArray = removedStr
             console.log(removedStr)
-            
+
         }
     }
     return strArray

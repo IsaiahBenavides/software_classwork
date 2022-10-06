@@ -7,48 +7,48 @@
 let i = 5 /*because the for loop already has an i defined it will not grab this global 
 definition and instead use its own definition.
 */
-for(let i = 0; i < 10; i++) { /* you can use the same variable in multiple for loops 
-because it is defined locally*/   
+for (let i = 0; i < 10; i++) { /* you can use the same variable in multiple for loops 
+because it is defined locally*/
     console.log(i);
 }
 
 console.log(i) //This console will use the global definition instead of the for loop definition.
 
-for(let i = 10; i >= 0; i--) {
+for (let i = 10; i >= 0; i--) {
     console.log(i)
 }
 
-for(let i = 1; i < 10; i += 2) {
+for (let i = 1; i < 10; i += 2) {
     console.log(i)
 }
 
-for(let i = 0; i < 10; i += 2) {
+for (let i = 0; i < 10; i += 2) {
     console.log(i)
 }
 
-for(let i = 3; i <= 60; i+= 3) {
+for (let i = 3; i <= 60; i += 3) {
     console.log(i)
 }
 
 let str = ""
 
-for(let i = 0; i < 7; i++) {
+for (let i = 0; i < 7; i++) {
     str += "#"
     console.log(str)
 }
 
-for(let i = 0; i <= 10; i++) {
-    if(i % 2 === 0) {
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 === 0) {
         console.log(i)
     } else {
         console.log("odd")
     }
 }
 // Not sure how to log prime numbers
-for(let i = 1; i <= 20; i++) {
-    if(i % i != 0) {
+for (let i = 1; i <= 20; i++) {
+    if (i % i != 0) {
         console.log("prime")
-    } else if(i % 2 === 0) {
+    } else if (i % 2 === 0) {
         console.log("even")
     } else {
         console.log("odd")
@@ -112,7 +112,7 @@ movies.forEach((movie, idx) => {
 // console.log("The movie " + movies[0] + " is awesome!")
 
 // for of loop
-for (let movie  of movies) {
+for (let movie of movies) {
     console.log(movie)
 }
 

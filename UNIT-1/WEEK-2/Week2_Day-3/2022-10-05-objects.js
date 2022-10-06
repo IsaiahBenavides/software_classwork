@@ -62,10 +62,10 @@
 const car3 = {
     make: "Ford",
     model: "Cilontro",
-    color:"blue",
+    color: "blue",
     year: "2004",
-    drive: ()=> {
-        "The "+ this.make +" is now driving..."
+    drive: () => {
+        "The " + this.make + " is now driving..."
     }
 }
 
@@ -75,10 +75,10 @@ console.log(car3.drive())
 const car4 = {
     make: "Ford",
     model: "Cilontro",
-    color:"blue",
+    color: "blue",
     year: "2004",
-    drive: function() {
-        console.log("The "+ this.make +" is now driving...")
+    drive: function () {
+        console.log("The " + this.make + " is now driving...")
     },
     owners: ["bob", "sally", "sue"]
 }
