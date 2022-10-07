@@ -1,12 +1,10 @@
 // There is only one Governor in the state, add static methods and properties you'd expect a Governor to have.
 
 class Governor {
-    constructor(name, age, suit, watch) {
-        this.name = name;
-        this.age = age;
-        this.suit = suit;
-        this.watch = watch;
-    };
+    static name = `Henry`;
+    static age = 55;
+    static suit = `Calven Klein`;
+    static watch = `Rolex`;
     static keyToCity() {
         console.log(`I, your Governor, herby present the key to our city to this local hero!`)
         return this.keyToCity
@@ -18,8 +16,8 @@ class Governor {
 };
 
 // log the properties and test the methods (don't instantiate)
+console.log(Governor)
 Governor.keyToCity()
-
 Governor.callMayor()
 
 // Think of three properties all people share, set them with the constructor

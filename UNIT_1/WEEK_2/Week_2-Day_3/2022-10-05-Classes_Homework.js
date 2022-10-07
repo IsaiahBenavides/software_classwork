@@ -68,5 +68,5 @@ const queenAnnesRevenge = [henryMorgan, captainKidd, seaDog]
 for (let i = 0; i < 3; i++) {
     console.log(jollyRoger[i]);
     console.log(queenAnnesRevenge[i]);
-}
+};
 
