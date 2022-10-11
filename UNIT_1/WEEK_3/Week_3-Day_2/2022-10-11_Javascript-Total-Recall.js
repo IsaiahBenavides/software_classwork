@@ -787,15 +787,25 @@ let combineCats = (p1, p2) => {
         breed: newBreed,
         age: newAge,
     }
-    console.log(child)
+    return (child)
 }
 
-combineCats(cat1, cat2)
+console.log(combineCats(cat1, cat2))
 
 // ==== CAT BRAIN BENDER ====
 
 /*
+If combineCats returns an object, and if combineCats takes objects as arguments, then it stands to reason that:
 
+catCombinator can use itself as its own argument.
+
+What is the result of: 
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
+
+The above console.log is two levels deep of combineCats.
+
+Write a console.log that is three levels deep of combineCats. combineCats should have two arguments, each which are combineCats, each which have two arguments, each which are combineCats.
+Your output should look something like:
 */
-
+console.log(combineCats(combineCats(combineCats(cat1,cat2), combineCats(cat1,cat2)), combineCats(combineCats(cat1,cat2), combineCats(cat1,cat2))))
 
