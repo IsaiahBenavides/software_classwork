@@ -125,10 +125,27 @@ const longestStringInArray = function (...args) {
     return longest;
 }
 
-console.log(longestStringInArray("Short6", "Meeeeeeeeedium15", "LOOOOOOOOOOOONNNNNNNNNNGGGGG30", "Meeeeeeeeedium15", "Short6"))
+console.log(longestStringInArray("Short6", "Meeeeeeeeedium15", "LOOOOOOOOOOOONNNNNNNNNNGGGGG30", 
+"Meeeeeeeeedium15", "Short6"))
+
+const longestStringInArray2 = function(arrayOfNums) {
+    let longest = 0;
+    for(let i=0;i<arrayOfNums.length;i++){
+        if (arrayOfNums[i].length > longest){
+            longest = arrayOfNums[i].length;
+        }
+    }
+    return longest;
+};
+console.log(longestStringInArray2(["Short6", "Meeeeeeeeedium15", "LOOOOOOOOOOOONNNNNNNNNNGGGGG30", 
+"Meeeeeeeeedium15", "Short6"]))
+
 
 // 9.
-// Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments, and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would return ["hello", "morning"].
+// Define a function, as a function declaration, stringsLongerThan that takes an array of strings 
+//and a number as arguments, and returns an array of the strings that are longer than the number 
+//passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would 
+//return ["hello", "morning"].
 
 function stringsLongerThan(strArray, num) {
     for (let i = 0; i < strArray.length; i++) {
