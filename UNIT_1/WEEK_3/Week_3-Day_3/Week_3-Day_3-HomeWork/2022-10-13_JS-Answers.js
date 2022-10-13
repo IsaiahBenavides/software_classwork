@@ -161,3 +161,19 @@ for(let i = 0;i <= 20; i++){
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+// Expected output:
+// => 15
+
+// 1. Find the median number in the following nums array, then console.log that number.
+nums.sort()
+console.log(nums)
+
+let median;
+
+let middleIndex = Math.floor(nums.length/2)
+
+median = nums[middleIndex]
+
+console.log(median)
