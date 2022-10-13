@@ -130,6 +130,21 @@ console.log(favMovies.indexOf(`Fast and Furious`))
 // Where is Waldo
 ////////////////////////////////
 
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+
+// 1. Remove Eggbert (hint look at the slice/splice method(s))
+whereIsWaldo.splice(1,1)
+console.log(whereIsWaldo)
+
+// 2. Change "Neff" to "No One"
+whereIsWaldo[1][2] = `No One`
+console.log(whereIsWaldo)
+
+// 3. Access and console.log "Waldo"
+whereIsWaldo[2][1][1]
+console.log(whereIsWaldo[2][1][1])
 
 ////////////////////////////////
 //  Excited Kitten
