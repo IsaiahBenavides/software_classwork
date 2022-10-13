@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Specficity</title>
+  
+</head>
+<body>
+  <style>
+    div {
+      background-color: red;
+      color: greenyellow;
+      border: 5px dashed black
+    }
+    
+
+    .first {
+      background-color: aqua;
+      color:coral
+    }
+
+    .twins {
+      background-color:blueviolet;
+      color:darkorange;
+      border: 5px solid tan;
+    }
+
+    #im-Different {
+      background-color:black;
+      color:aqua;
+      font-weight: 300;
+    }
+
+    p {
+      color: white
+    }
+
+    .first  p {
+      color: red;
+      font-weight: bolder;
+      font-size: 30px;
+      border: 5px solid black
+    }
+
+    .twins > a {
+      font-size: 20px;
+      font-weight: 900;
+      color:crimson
+    }
+
+    #im-Different > a {
+      color:chartreuse
+    }
+
+    /* div {
+      background-color: mediumvioletred !important;
+    } */
+    
+    
+  </style>
+  <div class="first">
+    <p>Hello World</p>
+  </div>
+  <br>
+  <br>
+  <div class="twins">
+    <p>Css is weird :/</p>
+    <a href="www.mdn.org">MDN</a>
+  </div>
+  <br>
+  <div class="twins" id="im-Different" style="background-color:fuchsia">
+    <p>Css is weird :/</p>
+    <a  href="www.w3schools.com">W3schools</a>
+  </div>
+
+</body>
+</html>

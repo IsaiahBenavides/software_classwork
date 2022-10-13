@@ -1,0 +1,134 @@
+.fixed {
+    width: 200px;
+    height: 150px;
+    border: 2px solid pink;
+    position: fixed;
+    top: 10%;
+    left: 60%;
+  
+    
+  }
+  
+  #geeks1 {
+    height: 50px;
+    width: 100px;
+    background: teal;
+    display: block;
+  }
+  
+  #geeks2 {
+    height: 50px;
+    width: 100px;
+    background: cyan;
+  
+  }
+  
+  #geeks3 {
+    height: 50px;
+    width: 100px;
+    background: green;
+  }
+  
+  .inline-wrapper {
+    width: 325px;
+    border: 2px solid black;
+    padding: 2px;
+  }
+  
+  #geeks4 {
+    height: 50px;
+    width: 100px;
+    background: khaki;
+    display: inline-block;
+  }
+  
+  #geeks5 {
+    height: 50px;
+    width: 100px;
+    background:lightcoral;
+    display: inline-block;
+  }
+  
+  #geeks6 {
+    height: 50px;
+    width: 100px;
+    background:lightsalmon;
+    display: inline-block;
+  }
+  
+  #geeks7 {
+    height: 50px;
+    width: 100px;
+    background:dodgerblue;
+    display: inline-block;
+  }
+  
+  #geeks8 {
+    height: 50px;
+    width: 100px;
+    background:firebrick;
+    display: inline-block;
+  }
+  
+  #geeks9 {
+    height: 50px;
+    width: 100px;
+    background:indigo;
+    display: inline-block;
+  }
+  
+  .inline {
+    height: 50px;
+    width: 100px;
+    border: 2px dotted black;
+    display: inline;
+  }
+  
+  .pos {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    border: 3px solid #73AD21;
+  
+  }
+  
+  #inner {
+    border: 2px dotted green;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* center this div */
+    /* margin: -100px 0 0 -200px; */
+    transform: translate(-50%, -50%);
+    /* order: top right bottom left */
+  }
+  
+  .clr {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-style: itallic;
+    font-size: 25px;
+    text-align: center;
+    float: left;
+    padding: 15px;
+  }
+  
+  p.GFG {
+    clear: left;
+  }
+  
+  h1,
+  h2 {
+    color: green;
+    text-align: center;
+  }
+  
+  .wait {
+    cursor:progress;
+  }
