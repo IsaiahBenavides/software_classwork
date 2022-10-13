@@ -142,7 +142,21 @@ console.log(whereIsWaldo[2][1][1])
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
+const kittenTalk = ["...human...why you taking pictures of me?...", "...the catnip made me do it...","...why does the red dot always get away..."]
 
+for(let i = 0;i <= 20; i++){
+    console.log(i, "Love me, pet me! HSSSSSS!")
+    if(i%2===0){
+        let rndNum = Math.floor(Math.random()*10)
+        if(rndNum <= 3){
+            console.log(rndNum, kittenTalk[0])
+        } else if(rndNum <= 6){
+            console.log(rndNum, kittenTalk[1])
+        } else {
+            console.log(rndNum, kittenTalk[2])
+        }
+    }
+}
 
 ////////////////////////////////
 //  Find the Median
