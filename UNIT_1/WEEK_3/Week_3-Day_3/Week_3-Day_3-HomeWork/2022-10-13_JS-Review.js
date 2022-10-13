@@ -74,33 +74,57 @@ for (const names of turtles) {
 // Methods, Revisited
 ////////////////////////////////
 
-// const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 
-// // 1. use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
-// favMovies.sort() // This method has sorted the movies into alphabetical order.
-// console.log(favMovies)
+// 1. use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
+favMovies.sort() // This method has sorted the movies into alphabetical order.
+console.log(favMovies)
 
-// // 2. Use the method pop
-// favMovies.pop()
-// console.log(favMovies)
+// 2. Use the method pop
+favMovies.pop()
+console.log(favMovies)
 
-// // 3. push "Guardians of the Galaxy"
-// favMovies.push(`Guardians of the Galaxy`) // Although sort() alphabetized the array, pop and push still only effect the last entry of the array, regarless of alphabetical order (Guardians of the galaxy is not pushed into where it should be alphabeticaly but instead pushed to the very end.)
-// console.log(favMovies)
+// 3. push "Guardians of the Galaxy"
+favMovies.push(`Guardians of the Galaxy`) // Although sort() alphabetized the array, pop and push still only effect the last entry of the array, regarless of alphabetical order (Guardians of the galaxy is not pushed into where it should be alphabeticaly but instead pushed to the very end.)
+console.log(favMovies)
 
-// // 4. Reverse the array
-// favMovies.reverse()
-// console.log(favMovies)
+// 4. Reverse the array
+favMovies.reverse()
+console.log(favMovies)
 
-// // 5. Use the shift method
-// favMovies.shift() // Shift shows the same behavior as push, only effecting the first entry.
-// console.log(favMovies)
+// 5. Use the shift method
+favMovies.shift() // Shift shows the same behavior as push, only effecting the first entry.
+console.log(favMovies)
 
-// // 6. unshift - what does it return?
-// favMovies.unshift(`King Kong`) // Nothing without a given entry, in this example I used King Kong
-// console.log(favMovies)
+// 6. unshift - what does it return?
+favMovies.unshift(`King Kong`) // Nothing without a given entry, in this example I used King Kong
+console.log(favMovies)
 
-// // 7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself) Thought question: did this permanently alter our array?
+// 7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself) Thought question: did this permanently alter our array?
+console.log(favMovies.indexOf("Django Unchained"))
+favMovies.splice(15,1,`Avatar`) 
+console.log(favMovies)
+// Yes, entry 15 which used to be Django is now Avatar, outside of entry 15 no other entry was effected in the array
+
+// 8. slice the last half of the array (challenge yourself and try to programatically determine the middle of the array rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
+console.log(favMovies.indexOf("Black Panther"))
+favMovies.slice(9,19)
+console.log(favMovies)
+// No, slice is simply refering to the portion of the array that it is given
+
+// 9. store the value of your slice in a variable, console.log it - Thought question: what is going on here?
+let lastHalf = favMovies.slice(9,19)
+console.log(lastHalf)
+// Slice is refering to the portion of the array that it is given
+
+// 10. console.log your final results
+console.log(favMovies)
+
+// 11 After running the above tasks, console.log the index of "Fast and Furious" -We removed it from the array, what value do we get when we look for the index of something that is not in the array?
+console.log(favMovies.indexOf(`Fast and Furious`))
+
+// 12. Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
+//While the variable favMovies never changes, it's content does, if we used let we could be faced with an issue of losing the array because we reassigned faveMovies to another value.
 
 ////////////////////////////////
 // Where is Waldo
