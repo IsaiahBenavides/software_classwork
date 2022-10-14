@@ -1,0 +1,3 @@
+[submodule "doggie-mockup-starter"]
+	path = doggie-mockup-starter
+	url = https://github.com/JoshuaMillerCode/doggie-mockup-starter.git
