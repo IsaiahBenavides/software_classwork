@@ -179,5 +179,3 @@ ulEl.append(fifthCommentEl)
 
 // Which property on DOM elements is used to set the CSS properties for that element?
             //style property
-
-
