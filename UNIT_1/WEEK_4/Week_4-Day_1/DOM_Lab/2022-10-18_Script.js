@@ -1,5 +1,5 @@
 // Menu data structure
-var menuLinks = [
+const menuLinks = [
     {text: 'about', href: '/about'},
     {text: 'catalog', href: '/catalog'},
     {text: 'orders', href: '/orders'},
