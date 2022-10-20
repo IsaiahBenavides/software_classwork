@@ -1,0 +1,32 @@
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 50px 1fr 30px;
+    grid-gap: 5px;
+}
+
+nav, footer{
+    /* this is saying start at line 1 and end at line 3
+    grid-column: 1 / 3; */
+    /* this is saying take up 2 columns */
+    grid-column: span 2;
+}
+
+aside{
+    background-color: #a2b4da;
+}
+
+main{
+    background-color: #f3dba8;
+}
+
+footer{
+    background-color: #a2cbb6;
+}
+
+.flex-ctr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

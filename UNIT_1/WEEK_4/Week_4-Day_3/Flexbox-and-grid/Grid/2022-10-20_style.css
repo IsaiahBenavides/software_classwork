@@ -1,0 +1,30 @@
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* margin: 0; */
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row; /* default */
+    justify-content: flex-start; /* default */
+    height: 50px;
+    background-color: #a2cbb6;
+  }
+
+  nav > div {
+    font-size: 20px;
+    margin: 10px;
+    color: #f3dba8;
+    border: 2px solid black
+  }
+
+  nav > div:last-child {
+    margin-left: auto;
+  }
