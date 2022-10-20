@@ -7,7 +7,8 @@ const stations = [
 
 const radio = function(currentStation) {
     let currentSong = Math.floor(Math.random()*3)
-    stations[currentStation] = console.log("Now Playing:" + stations[currentStation].songs[currentSong].title + " by " + stations[currentStation].songs[currentSong].artist)
+    console.log("Now Playing:" + stations[currentStation].songs[currentSong].title + " by " + stations[currentStation].songs[currentSong].artist)
 }
 
 radio(0)
+console.log(stations)
