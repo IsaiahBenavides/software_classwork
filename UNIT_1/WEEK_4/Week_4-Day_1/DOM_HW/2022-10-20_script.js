@@ -147,25 +147,73 @@ topMenuLinks.forEach((arg) => {
 // Next, the event listener should add a class name of active to the <a> element that was clicked.
 evt.target.classList.add(`active`)
 
+let linkObj = menuLinks.find(function(menuLinksObj){
+    return menuLinksObj.text === evt.target.textContent;
+});
+console.log(linkObj)
+
+// buildSubMenu function
+function buildSubMenu(linkObj) {
+    subMenuEl.innerHTML = "";
+    // console.log(subMenuEl);
+    linkObj.subLinks.forEach(function(currentLink) {
+      let link = document.createElement("a");
+      link.setAttribute("href", currentLink.href);
+      link.textContent = currentLink.text;
+      subMenuEl.append(link);
+    });
+
+    subMenuEl.addEventListener("click", function(evt2) {
+      evt2.preventDefault();
+
+      if(evt2.target.matches("a") ) {
+        console.log(evt2.target)
+      } else {
+        return;
+      }
+
+      showingSubMenu = false;
+      subMenuEl.style.top = "0";
+
+      let aLinksAgain = document.querySelectorAll("#top-menu > a");
+      aLinksAgain.forEach(function(elem) {
+          elem.classList.remove("active");
+      });
+
+      mainEl.innerHTML = `<h1>${evt2.target.textContent}</h1>`;
+
+    },{once : true});
+  }
+
 // Task 5.6
 // Set showingSubMenu to true if the clicked <a> element's "link" object within menuLinks has a subLinks property (all do, except for the "link" object for ABOUT), otherwise, set it to false.
 
-for (let i = 0; i < menuLinks.length; i++) {
-    console.log('menuLinks')
+if(evt.target.getAttribute(`href`)===`#`){
+    showingSubMenu = true;
+    buildSubMenu(linkObj)
+    subMenuEl.style.top = `100%`
+}else {
+    showingSubMenu = false;
+    subMenuEl.style.top = `0%`
+}
 
-    console.log(menuLinks[i])
-    //console.log(menuLinks[i].subLinks)
 
-    console.log(menuLinks[i].hasOwnProperty('subLinks'))
+// for (let i = 0; i < menuLinks.length; i++) {
+//     console.log('menuLinks')
+
+//     console.log(menuLinks[i])
+//     //console.log(menuLinks[i].subLinks)
+
+//     console.log(menuLinks[i].hasOwnProperty('subLinks'))
 
 
-    showingSubMenu = menuLinks[i].hasOwnProperty('subLinks')
-    if (menuLinks[i].hasOwnProperty('subLinks')) {
+//     showingSubMenu = menuLinks[i].hasOwnProperty('subLinks')
+//     if (menuLinks[i].hasOwnProperty('subLinks')) {
 
-      console.log(menuLinks[i].subLinks)
-    }
+//       console.log(menuLinks[i].subLinks)
+//     }
 
-  }
+//   }
 
 // for (let i = 0; i < menuLinks.length; i++){
 //     if('subLinks' in menuLinks[i]){
