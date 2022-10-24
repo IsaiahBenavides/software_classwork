@@ -11,4 +11,4 @@ const radio = function(currentStation) {
 }
 
 radio(0)
-console.log(stations)
+console.log(stations) 

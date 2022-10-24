@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    background-color: darkgoldenrod; 
+}
+
+div{
+    border: 2px solid black;
+    margin: 15%;
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div>*{
+    margin: 3%;
+    text-align: center;
+}
