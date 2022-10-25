@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Battle</title>
+    <script defer src="JS/2022-10-25_script.js"></script>
+    <link rel="stylesheet" href="CSS/2022-10-25_style.css" />
+</head>
+
+<body>
+    <h1>Pokemon Battle</h1>
+    <div id="element-container">
+        <img src="Images/pokemon-rock-paper-scissors.jpeg" alt="RPS" />
+        <img src="Images/pokemon_1stgen.webp" alt="elements-weakness" />
+    </div>
+    <div id="start-container">
+        <div id="instructions">
+            <h3>
+                Instructions: Two-player game where each player will choose an element
+                above.
+            </h3>
+            <h4>Stronger element wins.</h4>
+        </div>
+        <button id="startButton" onclick="game.start()">START</button>
+    </div>
+
+    <div class="hide" id="game-container">
+        <div id="display-container">
+            <div>
+                <h4 id="p1-name">Player 1:</h4>
+            </div>
+            <div>
+                <h4 id="p2-name">Player 2:</h4>
+            </div>
+        </div>
+        <p>Player 1: Enter your name and element.</p>
+        <div id="create-container">
+            <form>
+
+                <div>
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" />
+                </div>
+
+                <div>
+                    <label for="choose-element">Element:</label>
+                    <select id="choose-element">
+                        <option value="empty">Choose One!</option>
+                        <option value="water">Water</option>
+                        <option value="grass">Grass</option>
+                        <option value="fire">Fire</option>
+                    </select>
+                </div>
+                
+                <div id="submit-button">
+                    <button onclick="game.checkElement(event)">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
