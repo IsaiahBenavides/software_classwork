@@ -106,9 +106,9 @@ function handleClick(evt) {                                             //5.2b
                         aLink.classList.remove(`active`);
                     });
                     
-                }
-            })
-        }
+                };
+            });
+        };
         if(clickedLink.getAttribute(`href`)===`#`){                     //5.6
             showingSubMenu = true;
             console.log(showingSubMenu);
@@ -120,8 +120,8 @@ function handleClick(evt) {                                             //5.2b
             subMenuEl.style.top = `0%`;                                 //5.7c
         };
         
-    }
-    mainEl.innerHTML = `<h1>${clickedLink.textContent}</h1>`; //6.3
+    };
+    mainEl.innerHTML = `<h1>${clickedLink.textContent.toUpperCase()}</h1>`; //6.3
 }
 
 topMenuEl.addEventListener(`click`, handleClick);                       //5.2
