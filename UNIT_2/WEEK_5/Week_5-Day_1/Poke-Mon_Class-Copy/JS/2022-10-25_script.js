@@ -19,6 +19,7 @@ const p2Ele = document.querySelector(`#p2-element`)
 // Battle
 const prompt = document.querySelector(`#battle-prompt`)
 const battleBtn = document.querySelector(`#battle-button`)
+const restartBtn = document.querySelector(`#restart-button`)
 
 class Player {
     constructor(name, element) {
@@ -99,17 +100,22 @@ const game = {
         p2Ele.src = `Images/${p2}.png`
 
         if(p1 === "fire" && p2 === "grass") {
-            prompt.innerText = `${pOneName} wins!`
+            prompt.innerText = `${pOneName} wins! Restart?`
         } else if(p1 === "grass" && p2 === "water") {
-            prompt.innerText = `${pOneName} wins!`
+            prompt.innerText = `${pOneName} wins! Restart?`
         } else if(p1 === "water" && p2 === "fire") {
-            prompt.innerText = `${pOneName} wins!`
+            prompt.innerText = `${pOneName} wins! Restart?`
         } else if(p1 === p2) {
             prompt.innerText = `Tie game!! No one wins!`
         } else {
-            prompt.innerText = `${pTwoName} wins!`
+            prompt.innerText = `${pTwoName} wins! Restart?`
         };
+        restartBtn.classList.toggle("hide")
+        battleBtn.classList.toggle(`hide`)
     },
+    restart: function() {
+        location.reload()
+    }
 }
 
 // Event Listeners
