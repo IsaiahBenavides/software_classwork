@@ -25,7 +25,7 @@ class USS_Earth {
 // Alienship Class
 
 class AlienShip {
-    randomHull = Math.random() * (10 - 3) + 3;
+    randomHull = Math.random() * (6 - 3) + 3;
     randomFirepower = Math.random() * (4 - 2) + 2;
     randomAccuracy = Math.random() * (.8 - .6) + .6;
     constructor(name) {
@@ -73,20 +73,19 @@ const alienFleet = [
 //battle function
 const battle = function () {
     for (let i = 0; i < alienFleet.length; i++) {
-        if(alienFleet[i].hull > 0){
-            USS_Earth.attack(alienFleet[i]);
-            if (alienFleet[i].hull > 1) {
-                alienFleet[i].attack();
-                if(alienFleet[i].hull > 1){
-                    USS_Earth.attack(alienFleet[i]);
+        do{
+            if(alienFleet[i].hull > 0){
+                USS_Earth.attack(alienFleet[i]);
+                if (alienFleet[i].hull > 1) {
+                    alienFleet[i].attack();
+                } else if (USS_Earth.hull > 0) {
+                    console.log(`You have defeated the alien ship! Continue?`);
+                    return;
+                } else {
+                    console.log(`You are defeted... Retry?`);
                 };
-            } else if (USS_Earth.hull > 0) {
-                console.log(`You have defeated the alien ship! Continue?`);
-                // return;
-            } else {
-                console.log(`You are defeted... Retry?`);
-            };
-        };
+            }
+        }while (alienFleet[i].hull > 1)
     };
 };
 
