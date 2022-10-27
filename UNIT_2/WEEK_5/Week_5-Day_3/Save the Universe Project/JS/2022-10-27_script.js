@@ -73,7 +73,7 @@ const alienFleet = [
 //battle function
 const battle = function () {
     for (let i = 0; i < alienFleet.length; i++) {
-        do{
+        do {
             if(alienFleet[i].hull > 0){
                 USS_Earth.attack(alienFleet[i]);
                 if (alienFleet[i].hull > 1) {
@@ -84,8 +84,8 @@ const battle = function () {
                 } else {
                     console.log(`You are defeted... Retry?`);
                 };
-            }
-        }while (alienFleet[i].hull > 1)
+            };
+        } while (alienFleet[i].hull > 1);
     };
 };
 

@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -21,7 +21,7 @@ body{
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    color: blanchedalmond; 
+    color: blanchedalmond;
 }
 
 #intro-text {
@@ -37,22 +37,24 @@ body{
     -webkit-animation: marquee 10s linear;
     animation: marquee 10s linear;
     animation-name: marquee;
-   animation-iteration-count: 1;
+    animation-iteration-count: 1;
 }
 
 @-webkit-keyframes marquee {
     0% {
         transform: translateY(100%);
     }
+
     100% {
         transform: translateY(-100%);
     }
 }
 
-@-webkit-keyframes marquee{
+@-webkit-keyframes marquee {
     0% {
         transform: translateY(100%);
     }
+
     100% {
         transform: translateY(-100%);
     }
@@ -62,51 +64,57 @@ body{
     position: absolute;
     align-items: center;
     padding-bottom: 20px;
+    margin-top: 35px;
     bottom: 0;
     left: 50px;
     right: 50px;
     text-align: center;
-    -webkit-animation: marquee 5s linear;
-    -webkit-animation: marquee 5s linear;
-    animation: marquee 5s linear;
+    -webkit-animation: marquee 2s linear;
+    -webkit-animation: marquee 2s linear;
+    animation: marquee 2s linear;
     animation-iteration-count: 1;
+    animation-duration: 0;
+    
 }
 
 
 /*Ships*/
 
-#shipsIntro{
+#shipsIntro {
     display: flex;
     flex-direction: column-reverse;
 }
 
 #heroShipIntro {
     animation: rotation 10s infinite linear;
-    
+
 }
 
 @keyframes rotation {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(359deg);
     }
 }
- 
- #alienShipIntro {
-    animation: rotation 10s infinite linear;
- }
 
- @keyframes rotation {
+#alienShipIntro {
+    animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(359deg);
     }
 }
-    /*animation: fly 50s linear infinite;
+
+/*animation: fly 50s linear infinite;
     pointer-events: none !important;
 	top: 0;
 	left: 0;
@@ -154,42 +162,40 @@ body{
 
 /*Reusables*/
 
-.hide{
+.hide {
     display: none;
 }
 
 
-
-
 /* CSS */
 #start-button {
-  background-color: initial;
-  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
-  height: 40px;
-  line-height: 40px;
-  outline: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  pointer-events: auto;
-  position: relative;
-  text-align: center;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: top;
-  white-space: nowrap;
-  width: 100%;
-  z-index: 9;
-  border: 0;
-  transition: box-shadow .2s;
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 9;
+    border: 0;
+    transition: box-shadow .2s;
 }
 
 .button-42:hover {
-  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+    box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
