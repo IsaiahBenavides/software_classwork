@@ -3,14 +3,193 @@
     padding: 0;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    background-image: url('../Images/space-bg.jpg');
+}
+
+#intro-container {
+    margin-left: 50%;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    color: blanchedalmond; 
+}
+
+#intro-text {
+    position: absolute;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    bottom: 0;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+    -moz-animation: marquee 10s linear;
+    -webkit-animation: marquee 10s linear;
+    animation: marquee 10s linear;
+    animation-name: marquee;
+   animation-iteration-count: 1;
+}
+
+@-webkit-keyframes marquee {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes marquee{
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.start {
+    position: absolute;
+    align-items: center;
+    padding-bottom: 20px;
+    bottom: 0;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+    -webkit-animation: marquee 5s linear;
+    -webkit-animation: marquee 5s linear;
+    animation: marquee 5s linear;
+    animation-iteration-count: 1;
+}
+
+
+/*Ships*/
+
+#shipsIntro{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#heroShipIntro {
+    animation: rotation 10s infinite linear;
+    
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+ 
+ #alienShipIntro {
+    animation: rotation 10s infinite linear;
+ }
+
+ @keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+    /*animation: fly 50s linear infinite;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: absolute;
+	animation-delay: 1s;
+	z-index: 9;    
+}
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}*/
+
 /*Reusables*/
 
 .hide{
     display: none;
 }
 
-#background-image{
-    width: 100vw;
-    height: 100vh;
-    background-image: url();
+
+
+
+/* CSS */
+#start-button {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }

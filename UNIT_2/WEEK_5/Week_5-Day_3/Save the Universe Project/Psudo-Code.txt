@@ -1,0 +1,16 @@
+At battle start
+    your ship attacks
+        if you hit
+            subtract power from enemy hp
+    if enemy is still alive
+        enemy attacks
+            if enemy hits
+                subtract enemy power from your hp
+    continue until
+        you have zero hp
+        or
+        the enemy has zero hp
+start next battle
+
+if there is no enemy ship left you win
+if you have zero hp you lose
