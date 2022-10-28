@@ -2,6 +2,10 @@ Minesweeper is a game in which the player must flag all the bombs on the board!
 As you clear empty spaces the board will show numbers in boxes, the number represent the amount of bombs that are adjacent to that box.
 Using logic and a bit of luck you must flag all bombs and clear all empty spaces to win!
 
+What I need:
+    Bombs placed in random spots
+    number warnings
+
 Functionality:
     Bombs yet to be flagged represented
     Number of flags used represented

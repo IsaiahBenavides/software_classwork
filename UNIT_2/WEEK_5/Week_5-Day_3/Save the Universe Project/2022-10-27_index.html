@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,48 @@
     <title>Save The Universe! Game project</title>
     <script defer src="JS/2022-10-27_script.js"></script>
     <link rel="stylesheet" href="CSS/2022-10-27_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-<body> 
+
+<body>
     <div>
         <div id="ships">
             <img id="heroShip" src="Images/hero-ship-removebg-preview.png" alt="hero">
             <img id="alienShip" src="Images/alien-ship-removebg-preview.png" alt="alien">
         </div>
         <div id="intro-container">
-            <div>
+            <div id="intro-scroll">
                 <div id="shipsIntro">
                     <img id="heroShipIntro" class="animate__shakeX" src="Images/hero-ship-removebg-preview.png" alt="hero">
                     <img id="alienShipIntro" class="hide" src="Images/alien-ship-removebg-preview.png" alt="alien">
                 </div>
+                <h1>Save The Universe!</h1>
+                
+                <input type="button" class="hide continue" value="Yes">
+                <input type="button" class="hide continue" value="No">
+
                 <h3 id="intro-text">
-                    Earth has been attacked by a horde of aliens! You are the captain of the USS HelloWorld, on a mission to destroy every last alien ship.
+                    Earth has been attacked by a horde of aliens! You are the captain of the USS HelloWorld, on a mission to
+                    destroy every last alien ship.
                     <br></br>
                     Battle the aliens as you try to destroy them with your lasers.
                     <br></br>
-                    There are six alien ships. The aliens' weakness is that they are too logical and attack one at a time: they will wait to see the outcome of a battle before deploying another alien ship. Your strength is that you have the initiative and get to attack first. However, you do not have targeting lasers and can only attack the aliens in order. After you have destroyed a ship, you have the option to make a hasty retreat.
+                    There are six alien ships. The aliens' weakness is that they are too logical and attack one at a time:
+                    they will wait to see the outcome of a battle before deploying another alien ship. Your strength is that
+                    you have the initiative and get to attack first. However, you do not have targeting lasers and can only
+                    attack the aliens in order. After you have destroyed a ship, you have the option to make a hasty
+                    retreat.
                 </h3>
-            </div>
-                <div class = 'start'>
-                <button id="start-button" onclick="game.start()">!!Start!!</button>
+                <div id="combat-log" class="hide">
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, suscipit cum aliquam sint quasi dolores ratione repellat, aspernatur quisquam alias id velit? Enim earum possimus hic suscipit ipsum est omnis.</p> -->
+                </div>
+                <div class='start'>
+                    <button type="button" class="startDecal" id="start-button">Start!!</button>
+                    <button type="button" class="hide" id="battle-button">Battle</button>
+
                 </div>
             </div>
-        
-        <div id="combat-log" class="hide">
         </div>
-    </div>
-    
 </body>
+
 </html>
