@@ -1,6 +1,12 @@
 
 //       SPACE BATTLE MINI LAB
 
+const game = {
+    start: function(){
+        
+    }
+}
+
 // Building ships
 class USS_Earth {
     static hull = 20;
