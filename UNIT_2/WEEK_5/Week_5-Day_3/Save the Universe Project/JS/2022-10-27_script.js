@@ -10,7 +10,6 @@ let combatLog = document.querySelector("#combat-log")
 
 
 
-
 // Building ships
 class USS_Earth {
     static hull = 20;
@@ -51,20 +50,16 @@ class AlienShip {
         this.accuracy = this.randomAccuracy.toFixed(2);
     };
     attack() {
+        let newAlienLog = document.createElement('p')
         let randomNum = Math.random();
         if (randomNum < this.accuracy) {
             USS_Earth.hull -= this.firepower;
-            newLog.innerText = "The alien ship " + this.shipName + " gets a hit! \n" + "Your HP: " + USS_Earth.hull
-            combatLog.append(newLog)
-            // console.log(`The hit chance ${randomNum.toFixed(2)} is under its accuracy of ${this.accuracy}!`);
-            // console.log(`The alien ship ${this.shipName} gets a hit!`);
-            // console.log(`Your HP: ${USS_Earth.hull}`);
-            // USS_Earth.hull -= this.firepower;
-            // console.log(`Your HP after attack: ${USS_Earth.hull}`);
+            newAlienLog.innerText = "The alien ship " + this.shipName + " gets a hit! \n" + "Your HP: " + USS_Earth.hull
+            combatLog.append(newAlienLog)
             return USS_Earth.hull;
         } else {
-            newLog.innerText = "The alien ship " + this.shipName + " missed! \n" + "Prepare your attack!" 
-            combatLog.append(newLog)
+            newAlienLog.innerText = "The alien ship " + this.shipName + " missed! \n" + "Prepare your attack!" 
+            combatLog.append(newAlienLog)
             // console.log(`The alien ship ${this.shipName} missed!`);
             // console.log(`Hit chance: ${randomNum.toFixed(2)}`);
             // console.log(`Accuracy: ${this.accuracy}`);
@@ -93,6 +88,7 @@ const alienFleet = [
 
 //battle function
 const battle = function () {
+    let newBattleLog = document.createElement('p')
     for (let i = 0; i < alienFleet.length; i++) {
         do {
             // if(alienFleet[i].hull > 0 ){
@@ -102,13 +98,13 @@ const battle = function () {
                     if (USS_Earth.hull >= 0) {
                         USS_Earth.attack(alienFleet[i])
                     } else{
-                        newLog.innerText = "You are defeated... Retry?"
-                        combatLog.append(newLog)
+                        newBattleLog.innerText = "You are defeated... Retry?"
+                        combatLog.append(newBattleLog)
                         // console.log(`You are defeted... Retry?`);
                     }
                 } else {
-                    newLog.innerText = "You win! The " + alienFleet[i].shipName + "is defeated!"
-                    combatLog.append(newLog)
+                    newBattleLog.innerText = "You win! The " + alienFleet[i].shipName + "is defeated!"
+                    combatLog.append(newBattleLog)
                     console.log(`You win! The ${alienFleet[i].shipName} is defeated.`);
                 };
             // } ;
@@ -122,7 +118,16 @@ const battle = function () {
     };
 };
 
+// War function is for itterating through the alien fleet
+const war = (USS_Earth, alienFleet ) =>{
+    alienFleet.forEach(ship => {
+        battle()
+    });
+}
 
+
+
+// Decision function is for choosing to fight the nex ship or retreat
 
 
 // START BUTTON 
