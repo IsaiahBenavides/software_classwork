@@ -15,7 +15,7 @@ body {
 }
 
 #intro-container {
-    margin-left: 50%;
+    /* margin-left: 50%; */
     width: 80vw;
     height: 80vh;
     display: flex;
@@ -27,17 +27,13 @@ body {
 #intro-text {
     position: absolute;
     align-items: center;
-    padding-bottom: 25px;
+    padding-bottom: 75px;
     margin-bottom: 50px;
     bottom: 0;
     left: 50px;
     right: 50px;
     text-align: center;
-    -moz-animation: marquee 10s linear;
-    -webkit-animation: marquee 10s linear;
-    animation: marquee 10s linear;
-    animation-name: marquee;
-    animation-iteration-count: 1;
+    animation: marquee 5s linear;
 }
 
 @-webkit-keyframes marquee {
@@ -46,17 +42,7 @@ body {
     }
 
     100% {
-        transform: translateY(-100%);
-    }
-}
-
-@-webkit-keyframes marquee {
-    0% {
-        transform: translateY(100%);
-    }
-
-    100% {
-        transform: translateY(-100%);
+        transform: translateY(0%);
     }
 }
 
@@ -69,20 +55,19 @@ body {
     left: 50px;
     right: 50px;
     text-align: center;
-    -webkit-animation: marquee 2s linear;
-    -webkit-animation: marquee 2s linear;
-    animation: marquee 2s linear;
-    animation-iteration-count: 1;
-    animation-duration: 0;
-    
 }
 
 
 /*Ships*/
 
-#shipsIntro {
+#shipsIntro{
+    width: 10%;
     display: flex;
     flex-direction: column-reverse;
+    align-content: center;
+    justify-content: center;
+    margin-left: 50%;
+    
 }
 
 #heroShipIntro {
