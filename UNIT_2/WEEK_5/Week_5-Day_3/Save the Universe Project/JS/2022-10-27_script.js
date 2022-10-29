@@ -87,48 +87,53 @@ const alienFleet = [
 
 
 //battle function
-const battle = function () {
+
+const battle = function(hero, enemy) {
     let newBattleLog = document.createElement('p')
-    for (let i = 0; i < alienFleet.length; i++) {
+    // for (let i = 0; i < alienFleet.length; i++) {
         do {
-            // if(alienFleet[i].hull > 0 ){
-                USS_Earth.attack(alienFleet[i]);
-                if (alienFleet[i].hull >= 0) {
-                    alienFleet[i].attack();
-                    if (USS_Earth.hull >= 0) {
-                        USS_Earth.attack(alienFleet[i])
+                hero.attack(enemy);
+                if (enemy.hull >= 0) {
+                    enemy.attack();
+                    if (hero.hull >= 0) {
+                        hero.attack(enemy)
                     } else{
                         newBattleLog.innerText = "You are defeated... Retry?"
                         combatLog.append(newBattleLog)
-                        // console.log(`You are defeted... Retry?`);
                     }
                 } else {
-                    newBattleLog.innerText = "You win! The " + alienFleet[i].shipName + "is defeated!"
+                    newBattleLog.innerText = "You win! The " + enemy.shipName + "is defeated!"
                     combatLog.append(newBattleLog)
-                    console.log(`You win! The ${alienFleet[i].shipName} is defeated.`);
+                    console.log(`You win! The ${enemy.shipName} is defeated.`);
                 };
-            // } ;
-        } while (alienFleet[i].hull > 0 && USS_Earth.hull > 0)
-        // prompt(`You have defeated the alien ship! Continue?`)
-        // setTimeout(prompt(`You have defeated the alien ship! Continue?`), 5000)
-        if(prompt(`You have defeated the alien ship! Continue?`) === null){
-            console.log("You didn't want to continue, now Earth will be overtaken by aliens!")
-            return
-        };
-    };
+        } while (enemy.hull > 0 && hero.hull > 0)
+        // if(prompt(`You have defeated the alien ship! Continue?`) === null){
+        //     console.log("You didn't want to continue, now Earth will be overtaken by aliens!")
+        //     return
+        // };
+    // };
 };
 
+
+
 // War function is for itterating through the alien fleet
-const war = (USS_Earth, alienFleet ) =>{
-    alienFleet.forEach(ship => {
-        battle()
-    });
+const war = function(hero, enemy){
+    for (let i = 0; i < alienFleet.length; i++){
+        battle(USS_Earth, alienFleet[i])
+        decide()
+        return
+    }
 }
 
-
-
 // Decision function is for choosing to fight the nex ship or retreat
-
+const decide = function(){
+    let newBattleLog = document.createElement('p')
+    if(prompt(`You have defeated the alien ship! Continue?`) === null){
+        newBattleLog.innerText = "You didn't want to continue, now Earth will be overtaken by aliens! Retry?"
+        combatLog.append(newBattleLog)
+        return
+    };
+}
 
 // START BUTTON 
 
@@ -146,7 +151,7 @@ startBtn.addEventListener('click', ()=>{
 })
 
 battleBtn.addEventListener('click', ()=>{
-    battle()
+    war(USS_Earth, alienFleet)
 })
 
 // ====== REFERNCE=====
@@ -171,4 +176,3 @@ battleBtn.addEventListener('click', ()=>{
 
 
 
-console.log("I started")
