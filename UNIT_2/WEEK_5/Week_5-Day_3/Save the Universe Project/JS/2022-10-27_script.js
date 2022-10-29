@@ -4,6 +4,7 @@
 // Querey selectors
 let startBtn = document.querySelector('#start-button')
 let battleBtn = document.querySelector("#battle-button")
+let retreatBtn = document.querySelector("#retreat-button")
 let introText = document.querySelector("#intro-text")
 let combatLog = document.querySelector("#combat-log")
 
@@ -19,20 +20,19 @@ class USS_Earth {
         let randomNum = Math.random();
         let newLog = document.createElement('p')
         if (randomNum.toFixed(2) < USS_Earth.accuracy) {
+            console.log(`${ship.shipName} HP was: ${ship.hull}`);
+            console.log(`Your hit chance: ${randomNum.toFixed(2)} is under your accuracy!`);
+            console.log(`It's a hit!`);
             ship.hull -= USS_Earth.firepower;
             newLog.innerText = "It's a hit! \n" + ship.shipName + " HP: " + ship.hull.toFixed(2)
             combatLog.append(newLog)
-            console.log(`Your hit chance: ${randomNum.toFixed(2)} is under your accuracy!`);
-            // console.log(`It's a hit!`);
-            // console.log(`${ship.shipName} HP: ${ship.hull}`);
-            
-            console.log(`${ship.shipName} HP: ${ship.hull.toFixed(2)}`);
+            console.log(`${ship.shipName} HP is now: ${ship.hull.toFixed(2)}`);
             return ship.hull;
         } else {
             newLog.innerText = `You missed ${ship.shipName}! Prepare for impact!!`
             combatLog.append(newLog)
-            // console.log(`You missed the alien ship ${ship.shipName}...`);
-            // console.log(`Your hit chance: ${randomNum.toFixed(2)} did not fall under your accuracy of 0.7...`);
+            console.log(`You missed the alien ship ${ship.shipName}...`);
+            console.log(`Your hit chance: ${randomNum.toFixed(2)} did not fall under your accuracy of 0.7...`);
         };
     };
 };
@@ -53,16 +53,20 @@ class AlienShip {
         let newAlienLog = document.createElement('p')
         let randomNum = Math.random();
         if (randomNum < this.accuracy) {
+            console.log(`The alien hit chance: ${randomNum.toFixed(2)} is under it's accuracy!`);
+            console.log(`It's a hit!`);
+            console.log(`Your HP was: ${USS_Earth.hull}`);
             USS_Earth.hull -= this.firepower;
+            console.log(`Your HP is now: ${USS_Earth.hull}`);
             newAlienLog.innerText = "The alien ship " + this.shipName + " gets a hit! \n" + "Your HP: " + USS_Earth.hull
             combatLog.append(newAlienLog)
             return USS_Earth.hull;
         } else {
             newAlienLog.innerText = "The alien ship " + this.shipName + " missed! \n" + "Prepare your attack!" 
             combatLog.append(newAlienLog)
-            // console.log(`The alien ship ${this.shipName} missed!`);
-            // console.log(`Hit chance: ${randomNum.toFixed(2)}`);
-            // console.log(`Accuracy: ${this.accuracy}`);
+            console.log(`The alien ship ${this.shipName} missed!`);
+            console.log(`Hit chance: ${randomNum.toFixed(2)}`);
+            console.log(`Accuracy: ${this.accuracy}`);
         };
     };
 };
@@ -93,8 +97,10 @@ let retreat = false
 
 const battle = function(hero, enemy) {
     let newBattleLog = document.createElement('p')
+
     // the for loop is deprecated by the war function
     // for (let i = 0; i < alienFleet.length; i++) { 
+
         do {
                 hero.attack(enemy);
                 if (enemy.hull >= 0) {
@@ -112,57 +118,63 @@ const battle = function(hero, enemy) {
                 };
         } while (enemy.hull > 0 && hero.hull > 0)
 
-        // the if prompt === null is also depricated, spliting the functionality like this makes it much more flexable
+        // the if prompt === null is depricated by the decide function, spliting the functionality like this makes it much more flexable
             // if(prompt(`You have defeated the alien ship! Continue?`) === null){
             //     console.log("You didn't want to continue, now Earth will be overtaken by aliens!")
             //     return
             // };
         // };
+
 };
-
-
-
-// War function is for itterating through the alien fleet
-const war = function(hero, enemy){
-    for (let i = 0; i < alienFleet.length; i++){
-        battle(USS_Earth, alienFleet[i])
-        decide()
-        if (retreat === true){
-            return
-        } else {
-        }
-    }
-}
 
 // The decide function is for choosing to fight the next ship or not
 const decide = function(){
     let newBattleLog = document.createElement('p')
-    if(prompt(`You have defeated the alien ship! Continue?`) === null){
+    if(prompt(`You have defeated the alien ship! Continue?`) === null /*retreat === false*/){
         retreat = true
         newBattleLog.innerText = "You didn't want to continue, now Earth will be overtaken by aliens! Retry?"
         combatLog.append(newBattleLog)
     }else{
         retreat = false
+        // newBattleLog.innerText = "You didn't want to continue, now Earth will be overtaken by aliens! Retry?"
+        // combatLog.append(newBattleLog)
     }
 }
+// War function is for itterating through the alien fleet
+const war = function(hero, enemy){
+    for (let i = 0; i < alienFleet.length; i++){
+        battle(USS_Earth, alienFleet[i]);
+        decide();
+        retreatBtn.classList.add("retreatDecal")
+        retreatBtn.classList.remove("hide")
+        if (retreat === true){
+            return
+        };
+    };
+};
 
-// START BUTTON 
-
+// BUTTONS
     
 startBtn.addEventListener('click', ()=>{
-    startBtn.classList.add("hide")
-    startBtn.classList.remove("startDecal")
+    startBtn.classList.add("hide");
+    startBtn.classList.remove("startDecal");
 
-    battleBtn.classList.add("battleDecal")
-    battleBtn.classList.remove("hide")
+    battleBtn.classList.add("battleDecal");
+    battleBtn.classList.remove("hide");
 
-    introText.classList.add("hide")
-    combatLog.classList.remove("hide")
+    introText.classList.add("hide");
+    combatLog.classList.remove("hide");
     
-})
+});
 
 battleBtn.addEventListener('click', ()=>{
-    war(USS_Earth, alienFleet)
+    war(USS_Earth, alienFleet);
+});
+
+// The problem is that the prompt is too fast in speed. It outspeeds the combat log so that the log will never be updated with information until the war function is finished. A possible solution is to do away with the prompt all together and instead use another event listener effecting the retreat boolean
+
+retreatBtn.addEventListener('click', ()=>{
+    retreat = true
 })
 
 // ====== REFERNCE=====
