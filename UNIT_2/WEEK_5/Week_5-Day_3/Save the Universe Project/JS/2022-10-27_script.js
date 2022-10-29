@@ -88,9 +88,13 @@ const alienFleet = [
 
 //battle function
 
+// In order to make sure the player prompt is taken into consideration I made a retreat boolean and reference it inside the war and decide functions
+let retreat = false
+
 const battle = function(hero, enemy) {
     let newBattleLog = document.createElement('p')
-    // for (let i = 0; i < alienFleet.length; i++) {
+    // the for loop is deprecated by the war function
+    // for (let i = 0; i < alienFleet.length; i++) { 
         do {
                 hero.attack(enemy);
                 if (enemy.hull >= 0) {
@@ -107,11 +111,13 @@ const battle = function(hero, enemy) {
                     console.log(`You win! The ${enemy.shipName} is defeated.`);
                 };
         } while (enemy.hull > 0 && hero.hull > 0)
-        // if(prompt(`You have defeated the alien ship! Continue?`) === null){
-        //     console.log("You didn't want to continue, now Earth will be overtaken by aliens!")
-        //     return
+
+        // the if prompt === null is also depricated, spliting the functionality like this makes it much more flexable
+            // if(prompt(`You have defeated the alien ship! Continue?`) === null){
+            //     console.log("You didn't want to continue, now Earth will be overtaken by aliens!")
+            //     return
+            // };
         // };
-    // };
 };
 
 
@@ -121,18 +127,23 @@ const war = function(hero, enemy){
     for (let i = 0; i < alienFleet.length; i++){
         battle(USS_Earth, alienFleet[i])
         decide()
-        return
+        if (retreat === true){
+            return
+        } else {
+        }
     }
 }
 
-// Decision function is for choosing to fight the nex ship or retreat
+// The decide function is for choosing to fight the next ship or not
 const decide = function(){
     let newBattleLog = document.createElement('p')
     if(prompt(`You have defeated the alien ship! Continue?`) === null){
+        retreat = true
         newBattleLog.innerText = "You didn't want to continue, now Earth will be overtaken by aliens! Retry?"
         combatLog.append(newBattleLog)
-        return
-    };
+    }else{
+        retreat = false
+    }
 }
 
 // START BUTTON 
@@ -142,8 +153,8 @@ startBtn.addEventListener('click', ()=>{
     startBtn.classList.add("hide")
     startBtn.classList.remove("startDecal")
 
-    battleBtn.classList.remove("hide")
     battleBtn.classList.add("battleDecal")
+    battleBtn.classList.remove("hide")
 
     introText.classList.add("hide")
     combatLog.classList.remove("hide")
