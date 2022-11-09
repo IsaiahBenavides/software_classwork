@@ -1,0 +1,38 @@
+TCP can be more specific, searching for specific programs inside a computer not just the computer it's  self.
+
+Every time we go to a page, that is a HTTP request. When the response is gotten by the client (The client is the only initiator of communication it will never be the server) that response cycle his done and will no longer continue untill a new request is made.
+
+Stateless protocals focus on the current request ONLY. It will not be effected by any prior requests.
+
+REST APIs: look into this
+
+Status code is alwas a 3 digit number that falls within the following ranges/catagories
+    1xx Informational
+    2xx Success
+    3xx Redirection
+    4xx Client Error
+    5xx Server Error
+No need to remember all of them, but you will see more common errors often
+
+HTTP request start like so 
+GET /sample_page.html HTTP/1.1
+
+HTTP Method (Verb)	Desired Action on Server
+    GET	            The GET method requests a representation of the specified resource (URL). Requests using GET should only retrieve data.
+    POST	        The POST method is used to create a resource on the server.
+    PUT	            The PUT method replaces a resource with the request payload(data in the body). 
+    DELETE	        The DELETE method deletes the specified resource.
+
+URL (Unifor Resource Locator)
+
+REPL is an acronym for Read-Evaluate-Print-Loop.
+
+NODEjs is a run time environment so it does not have acess to the DOM or HTML elements
+
+In a Node application, every JavaScript file is a module!
+A Node app's modules (files) can be put in any folder within the project.
+This allows us to create modules inside of aptly named folders, such as models, routes, controllers, views, etc.
+
+NPM (Node Package Manager)
+
+Dependencies are the things that we need to run our code.
