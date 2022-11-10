@@ -1,0 +1,16 @@
+1.  
+
+
+
+
+2. Sort the roman numerals into objects with their corrisponding value, 
+
+Then, looping through the string of roman numerals we pull apart every 
+
+
+
+
+Algorithums (look into it)
+    1. Divide and conquer
+    2. Merge Sort
+    3. GREEDY

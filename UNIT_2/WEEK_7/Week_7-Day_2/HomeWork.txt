@@ -1,0 +1,15 @@
+Review Questions to turn in
+
+❓ When the add and subtract functions are passed as arguments to the compute function - they are ___ functions.
+
+Callback functions
+
+
+
+Review Questions to turn in
+
+❓ In your own words describe what the term "implicit return" means.
+Should there only be a single expression, you can ommit the curly braces since they are implied by JS.
+
+❓ Describe what a callback function is in your own words.
+A callback function is a function referred to by another function used as a paramater or argument in an iterator or action.

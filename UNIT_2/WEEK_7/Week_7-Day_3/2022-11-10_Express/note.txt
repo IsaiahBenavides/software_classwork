@@ -1,0 +1,31 @@
+Things we always do
+    1. npm init -y
+    2. npm i express
+
+HTTP Action	    CRUD Operator
+    GET	        Read
+    POST	    Create
+    PUT	        Update
+    DELETE	    Delete
+
+Create
+A Create or POSTcreates a new entry in a database that either you or someone else created. When we perform a POSTrequest, we send some amount of information to our data source, usually data from a form; and we create a new entry in the data source.
+
+Read
+The Reador GEToperation is something that you interact with every day. Whenever you pull information from an api, you are performing a GETrequest. GETrequests only allow users to view or read from a data source. This can be something as simple as you checking your email in the morning. We perform a GETrequest to a server and if everything goes OK we get some type of information or data back.
+
+Update
+Update or PUTworks very similar to a POSTrequest. We are still sending along some sort of data to our data source, but instead of creating a new entry, we are actually updating an existing entry. In order to this, we need to target that entry specifically, most of the times using an id. This allows us to send some new information to to our existing piece of data and overwrite it's existing attributes.
+
+Delete
+Delete does just as the name implies, it DELETE's something from our data source. We target the specific piece of information in the same way we did with our PUTrequest. This sends a request to the server to DELETEthis item.
+
+
+    URL	            HTTP Verb	    Action	    Used For
+/photos/	        GET	            index	    Displaying a list of all photos
+/photos/new	        GET	            new	        Display HTML form for creating a new photo
+/photos	            POST	        create	    Create a new photo
+/photos/:id	        GET	            show	    Display a specific photo
+/photos/:id/edit	GET	            edit	    Return an HTML form for editing a photo
+/photos/:id	PATCH/  PUT	            update	    Update a specific photo
+/photos/:id	        DELETE	        destroy	    Delete a specific photo
