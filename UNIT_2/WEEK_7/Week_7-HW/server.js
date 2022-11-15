@@ -55,7 +55,7 @@ app.get(`/meetUs`, (req, res)=>{
 });
 
 app.get(`/green`, (req, res)=>{
-    res.render(`templateTwo`, {title: `Landing Page`, message: `This is the GREEN page.`, color:`body {background-color:green}`, content: `Lorem Ipsum`});
+    res.render(`templateTwo`, {title: `Landing Page`, message: `This is the GREEN page.`, color:`body {background-color:green}`, content: `Lorem Ipsum`, });
 });
 
 

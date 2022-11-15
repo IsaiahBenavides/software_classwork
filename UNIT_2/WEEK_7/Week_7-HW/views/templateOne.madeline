@@ -5,3 +5,6 @@
 <header>#message#</header>
 #content#
 </body>
+<footer>
+#links#
+</footer>
