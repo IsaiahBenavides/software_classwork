@@ -1,33 +1,22 @@
 const express = require("express")
 const app = express()
 const PORT = 3000
+const fruits = require(`./models/fruits.js`)
+const reactViews = require(`express-react-views`)
 
-const fruits = [
-    {
-        name:'apple',
-        color: 'red',
-        readyToEat: true
-    },
-    {
-        name:'pear',
-        color: 'green',
-        readyToEat: false
-    },
-    {
-        name:'banana',
-        color: 'yellow',
-        readyToEat: true
-    }
-  ];
+app.set(`view engine`, `jsx`);
+app.engine(`jsx`, reactViews.createEngine());
 
-app.get("/", (req, res) => {
-  res.send(fruits)
+app.get("/fruits", (req, res) => {
+  res.render(`Index`, {fruits: fruits})
 })
 
-app.get("/:indexOfFruit", (req, res) => {
-  res.send(fruits[req.params.indexOfFruit])
+app.get("/fruits/:indexOfFruit", (req, res) => {
+//   res.send(fruits[req.params.indexOfFruit])
+    res.render(`Show`, {
+        fruit : fruits[req.params.indexOfFruit]
+    })
 })
-
 
 app.listen(PORT, () => { 
   console.log(`Listening on port: ${PORT}`)

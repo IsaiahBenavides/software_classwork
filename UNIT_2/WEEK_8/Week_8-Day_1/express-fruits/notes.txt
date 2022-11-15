@@ -1,0 +1,10 @@
+Things installed:
+nodemon
+express
+express-react-views
+react
+react-dom
+
+Look into: 
+React native
+Map Fuction and how to map with JSX

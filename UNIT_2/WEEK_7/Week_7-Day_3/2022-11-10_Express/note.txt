@@ -20,12 +20,13 @@ Update or PUT works very similar to a POSTrequest. We are still sending along so
 Delete
 Delete does just as the name implies, it DELETE's something from our data source. We target the specific piece of information in the same way we did with our PUTrequest. This sends a request to the server to DELETEthis item.
 
+                    INDUCES
 
     URL	            HTTP Verb	    Action	    Used For
 /photos/	        GET	            index	    Displaying a list of all photos
 /photos/new	        GET	            new	        Display HTML form for creating a new photo
-/photos	            POST	        create	    Create a new photo
-/photos/:id	        GET	            show	    Display a specific photo
-/photos/:id/edit	GET	            edit	    Return an HTML form for editing a photo
-/photos/:id	PATCH/  PUT	            update	    Update a specific photo
 /photos/:id	        DELETE	        destroy	    Delete a specific photo
+/photos/:id	PATCH/  PUT	            update	    Update a specific photo
+/photos	            POST	        create	    Create a new photo
+/photos/:id/edit	GET	            edit	    Return an HTML form for editing a photo
+/photos/:id	        GET	            show	    Display a specific photo
