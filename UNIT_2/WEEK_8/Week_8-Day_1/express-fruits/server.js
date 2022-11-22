@@ -15,6 +15,9 @@ app.get(`/fruits/new`, (req, res) =>{
   res.render(`New`);
 });
 
+// Good practice to place "Show" rout last
+// Placing more specific routs farther up is also a good practice
+
 app.get("/fruits/:indexOfFruit", (req, res) => {
 //   res.send(fruits[req.params.indexOfFruit])
     res.render(`Show`, {
